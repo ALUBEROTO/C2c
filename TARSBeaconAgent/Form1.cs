@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//using System.Net.Http;
 namespace TARSBeaconAgent
 {
     public partial class Form1 : Form
@@ -15,6 +15,8 @@ namespace TARSBeaconAgent
         public Form1()
         {
             InitializeComponent();
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            this.Text = $"TARS Beacon Agent v{version}";
         }
     }
 }
